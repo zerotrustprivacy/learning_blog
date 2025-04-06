@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - My Learning Journey</title> <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+      /* Apply base font */
+      body {
+        font-family: 'Inter', sans-serif;
+        /* Subtle gradient background */
+        background-image: linear-gradient(to top, #e0fdfa 0%, #f8fafc 100%); /* Light teal to slate */
+      }
+      /* Apply Poppins to headings */
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Poppins', sans-serif;
+      }
+      /* Style for active nav link */
+      .nav-active {
+        font-weight: 600; /* Make active link bolder */
+        text-decoration: underline; /* Underline active link */
+        text-decoration-thickness: 2px;
+        text-underline-offset: 4px;
+      }
+    </style>
+    <script>
+        // Extend Tailwind theme (same as index page)
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                         accent: { 50: '#ecfdf5', 100: '#d1fae5', 200: '#a7f3d0', 300: '#6ee7b7', 400: '#34d399', 500: '#10b981', 600: '#059669', 700: '#047857', 800: '#065f46', 900: '#064e3b' }
+                    },
+                    transitionProperty: { 'height': 'height', 'spacing': 'margin, padding', 'transform': 'transform', 'shadow': 'box-shadow' }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-accent-600 shadow-md sticky top-0 z-10">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+             <a href="index.html" class="text-2xl font-bold text-white font-heading">Learning Journey</a>
+            <div class="space-x-4">
+                 <a href="index.html" class="text-white hover:text-accent-100 transition-colors duration-200">Home</a>
+                 <a href="about.html" class="text-white hover:text-accent-100 transition-colors duration-200 nav-active" aria-current="page">About</a>
+                <a href="#" class="text-white hover:text-accent-100 transition-colors duration-200">Topics</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 py-16">
+        <div class="bg-white p-8 md:p-12 rounded-xl shadow-lg max-w-4xl mx-auto border-t-4 border-accent-500">
+            <h1 class="text-4xl font-bold mb-8 text-center text-gray-900 font-heading">About Me</h1>
+
+            <div class="md:flex md:items-center md:space-x-12">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <img src="https://placehold.co/250x250/10b981/FFFFFF?text=Hello!" alt="Placeholder image of me" class="rounded-full shadow-md object-cover aspect-square"
+                         onerror="this.onerror=null; this.src='https://placehold.co/250x250/cccccc/FFFFFF?text=Image+Not+Found';">
+                </div>
+
+                <div class="md:w-2/3 text-gray-700 space-y-4 leading-relaxed">
+                    <p>
+                        Hello! Welcome to my little corner of the internet where I document my adventures in learning. I believe that learning is a continuous journey, not a destination, and this blog is my way of tracking those small, incremental steps forward.
+                    </p>
+                    <p>
+                        Currently, my main focuses are diving deeper into <strong class="text-accent-700">Python programming</strong> and improving my <strong class="text-accent-700">French language skills</strong>. You'll find posts about coding challenges I'm tackling, French grammar points I'm trying to master, and maybe even some math concepts I'm revisiting!
+                    </p>
+                    <p>
+                        Beyond specific subjects, I'm also fascinated by the <em class="italic">process</em> of learning itself and finding efficient ways to acquire new skills. I'm always looking for smart strategies and resources – learning effectively often feels like saving time and effort in the long run!
+                    </p>
+                     <p>
+                        Based here in Nashville, TN, I hope sharing my progress (and inevitable stumbles) might be interesting or even helpful to others on similar paths. Thanks for stopping by!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-gray-300 mt-16 py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 My Learning Journey. Keep Learning!</p>
+            <p class="text-sm mt-1 text-gray-400">Built with Tailwind CSS & Font Awesome</p>
+        </div>
+    </footer>
+
+</body>
+</html>
+```
+
+**Summary of Changes:**
+
+1.  **New `about.html` Page:** Created a new document (`about_me_page_v1`) with the structure for the About Me page.
+    * Includes the same header, footer, styles, and fonts.
+    * Contains a main content section with a title, placeholder text personalized with your learning goals (Python, French) and interest in smart learning/saving, and a placeholder image.
+    * The "About" link in the header is marked as active.
+2.  **Updated `index.html` (Main Blog Page):** Updated the existing document (`incremental_learning_blog_v1`).
+    * The navigation links in the header now point correctly: "Home" to `index.html` and "About" to `about.html`.
+    * The "Home" link is marked as active.
+
+Now you have two linked HTML pages forming the basic structure of your blog website! You can add more content or pages following this patte
